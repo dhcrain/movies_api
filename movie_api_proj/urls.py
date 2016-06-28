@@ -18,4 +18,5 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^movies/$', MovieListAPIView.as_view(), name='player_list_api_view'),
 ]
