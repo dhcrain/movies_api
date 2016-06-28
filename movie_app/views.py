@@ -31,4 +31,3 @@ class RatingsListCreateAPIView(generics.ListCreateAPIView):
 class RatingsRetrieveUpdateDestroyAPIView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Rating.objects.all()
     serializer_class = RatingsSerializer
-    
