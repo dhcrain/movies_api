@@ -21,24 +21,8 @@ class RaterSerilizer(serializers.ModelSerializer):
         fields = ['id', 'age', 'gender', 'occupation', 'zip_code']
 
 
-class RatingsSerializer(serializers.ModelSerializer):
-    # user_id = serializers.HyperlinkedIdentityField(view_name='rater_retrieve_update_destroy_api_view')
-    # item_id = serializers.HyperlinkedIdentityField(view_name='movie_retrieve_update_destroy_api_view')
+class RatingsSerializer(serializers.HyperlinkedModelSerializer):
 
     class Meta:
         model = Rating
         fields = ['id', 'user_id', 'item_id', 'rating', 'timestamp']
-
-
-# HyperlinkedModelSerializer
-
-
-
-
-
-
-
-
-
-
-        pass

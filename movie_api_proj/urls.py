@@ -19,11 +19,11 @@ from movie_app.views import MovieListCreateAPIView, MovieRetrieveUpdateDestroyAP
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^api/movies/$', MovieListCreateAPIView.as_view(), name='movie_list_create_api_view'),
-    url(r'^api/movies/(?P<pk>\d+)/$', MovieRetrieveUpdateDestroyAPIView.as_view(), name='movie_retrieve_update_destroy_api_view'),
-    url(r'^api/raters/$', RaterListCreateAPIView.as_view(), name='rater_list_create_api_view'),
-    url(r'^api/raters/(?P<pk>\d+)/$', RaterRetrieveUpdateDestroyAPIView.as_view(), name='rater_retrieve_update_destroy_api_view'),
-    url(r'^api/ratings/$', RatingsListCreateAPIView.as_view(), name='ratings_list_create_api_view'),
-    url(r'^api/ratings/(?P<pk>\d+)/$', RatingsRetrieveUpdateDestroyAPIView.as_view(), name='ratings_retrieve_update_destroy_api_view'),
+    url(r'^api/movies/$', MovieListCreateAPIView.as_view(), name='movie-list'),
+    url(r'^api/movies/(?P<pk>\d+)/$', MovieRetrieveUpdateDestroyAPIView.as_view(), name='movie-detail'),
+    url(r'^api/raters/$', RaterListCreateAPIView.as_view(), name='rater-list'),
+    url(r'^api/raters/(?P<pk>\d+)/$', RaterRetrieveUpdateDestroyAPIView.as_view(), name='rater-detail'),
+    url(r'^api/ratings/$', RatingsListCreateAPIView.as_view(), name='ratings-list'),
+    url(r'^api/ratings/(?P<pk>\d+)/$', RatingsRetrieveUpdateDestroyAPIView.as_view(), name='rating-detail'),
 
 ]
